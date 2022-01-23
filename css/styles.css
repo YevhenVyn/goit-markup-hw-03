@@ -24,6 +24,12 @@ footer {
   outline: 2px dashed greenyellow;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .list {
   list-style: none;
   margin-bottom: 0;
@@ -33,9 +39,14 @@ footer {
 
 .link {
   text-decoration: none;
-}
-.link {
   color: inherit;
+}
+
+.link:hover,
+.link:focus,
+.logo:hover,
+.logo:focus {
+  color: var(--accent-color);
 }
 
 .page-header {
@@ -56,16 +67,35 @@ footer {
   outline: 2px solid tomato;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-contacts-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-contacts-item:not(:first-child) {
+  margin-left: 50px;
+}
+
 .header-link {
   color: var(--primary-color);
 }
 
-.link:hover,
-.link:focus,
-.logo:hover,
-.logo:focus {
-  color: var(--accent-color);
-}
 .current {
   color: var(--accent-color);
 }
@@ -85,9 +115,17 @@ footer {
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
 }
+.logo-header {
+  margin-right: 93px;
+}
+
 .logo-first {
   color: var(--accent-color);
 }
+.header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 /* ГЕРОЙ */
 .hero {
   padding-top: 200px;
@@ -156,6 +194,20 @@ footer {
   padding-bottom: 94px;
 }
 
+.skills-list {
+  display: flex;
+  /* justify-content: space-between; ЯК ВАРІАНТ - ТОДІ ЗАБРАТИ МАРДЖИНИ У SKILLS-ITEM*/
+}
+
+.skills-item {
+  flex-basis: 270px;
+  outline: 2px solid blueviolet;
+}
+
+.skills-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .skiils-title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -166,7 +218,7 @@ footer {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
-.sills-text {
+.skills-text {
   margin: 0;
   color: var(--secondary-color);
   /* font-weight: 400; */
@@ -191,27 +243,48 @@ footer {
   text-align: center;
   letter-spacing: 0.03em;
 }
+.about-list {
+  display: flex;
+}
+.about-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* КОМАНДА */
 .team {
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: var(--bgc-medium);
 }
-.team-item {
-  background-color: var(--bgc-light);
-}
 .team-list {
+  display: flex;
+  /* justify-content: space-between; */
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
   letter-spacing: 0.03em;
 }
+.team-item {
+  /* flex-basis: 270px; чи потрібно задавати фіксовану ширину елемента списку якщо не задавати її через формулу?*/
+  padding-bottom: 30px;
+  background-color: var(--bgc-light);
+  outline: 1px solid blue;
+}
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+.team-img {
+  margin-bottom: 30px;
+}
 .team-member {
+  margin-top: 0;
+  margin-bottom: 10px;
   color: var(--titles-color);
   font-weight: 500;
   font-size: inherit;
 }
 .team-position {
+  margin: 0;
   /* font-weight: 400; */
   color: var(--secondary-color);
 }
