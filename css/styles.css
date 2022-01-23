@@ -5,6 +5,7 @@
   --titles-color: #212121;
   --titles-light: #ffffff;
   --titles-light-transparency: rgba(255, 255, 255, 0.6);
+  --portfolio-items-border: #eeeeee;
   --bgc-dark: #2f303a;
   --bgc-medium: #f5f4fa;
   --bgc-light: #ffffff;
@@ -12,22 +13,26 @@
 }
 
 body {
-  width: 1600px;
+  /* width: 1600px; */
   color: var(--primary-color);
   font-family: 'Roboto', sans-serif;
   background-color: var(--bgc-light);
   font-size: 14px;
 }
-header,
+/* header,
 section,
 footer {
   outline: 2px dashed greenyellow;
-}
+} */
 
 img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .list {
@@ -64,7 +69,7 @@ img {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  outline: 2px solid tomato;
+  /* outline: 2px solid tomato; */
 }
 
 .header-container {
@@ -144,7 +149,7 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   /* text-align: center; */
-  background-color: tomato;
+  /* background-color: tomato; */
 }
 .order-btn {
   display: inline-block;
@@ -189,10 +194,10 @@ img {
 .about {
   background-color: var(--bgc-light);
 }
-.skills {
+/* .skills {
   padding-top: 94px;
   padding-bottom: 94px;
-}
+} */
 
 .skills-list {
   display: flex;
@@ -201,7 +206,7 @@ img {
 
 .skills-item {
   flex-basis: 270px;
-  outline: 2px solid blueviolet;
+  /* outline: 2px solid blueviolet; */
 }
 
 .skills-item:not(:last-child) {
@@ -252,8 +257,8 @@ img {
 
 /* КОМАНДА */
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  /* padding-top: 94px;
+  padding-bottom: 94px; */
   background-color: var(--bgc-medium);
 }
 .team-list {
@@ -266,16 +271,23 @@ img {
 }
 .team-item {
   /* flex-basis: 270px; чи потрібно задавати фіксовану ширину елемента списку якщо не задавати її через формулу?*/
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
   background-color: var(--bgc-light);
-  outline: 1px solid blue;
+  border-radius: 0px 0px 4px 4px;
+  /* outline: 1px solid blue; */
 }
 .team-item:not(:last-child) {
   margin-right: 30px;
 }
-.team-img {
-  margin-bottom: 30px;
+.team-text {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
+
+/* .team-img {
+  margin-bottom: 30px;
+} */
+
 .team-member {
   margin-top: 0;
   margin-bottom: 10px;
@@ -317,7 +329,20 @@ img {
 }
 /* СТОРІНКА "ПОРТФОЛІО" */
 /* КНОПКИ */
+.portfolio-btn-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-btn-item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .portfolio-btn {
+  border: 0;
+  border-radius: 4px;
+  padding: 6px 22px;
   background-color: var(--bgc-medium);
   color: var(--titles-color);
   font-weight: 500;
@@ -336,6 +361,20 @@ img {
   color: var(--bgc-light);
 }
 /* ПРИКЛАДИ РОБІТ */
+.portfolio-cards-list {
+  display: flex;
+  margin-right: -30px;
+  margin-bottom: -30px;
+  flex-wrap: wrap;
+}
+.portfolio-item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-right: 30px;
+  margin-bottom: 30px;
+  background-color: var(--bgc-light);
+  border: 1px solid var(--portfolio-items-border);
+}
+
 .portfolio-cards-link {
   text-decoration: none;
 }
@@ -344,7 +383,17 @@ img {
   text-decoration: underline;
 } */
 
+.cards-text {
+  padding: 20px 24px;
+  border-left: 1px solid var(--portfolio-items-border);
+  border-right: 1px solid var(--portfolio-items-border);
+  border-bottom: 1px solid var(--portfolio-items-border);
+  /* outline: 1px solid orange; */
+}
+
 .portfolio-cards-titles {
+  margin-top: 0;
+  margin-bottom: 4px;
   color: var(--titles-color);
   font-weight: 700;
   font-size: 18px;
@@ -352,8 +401,8 @@ img {
   letter-spacing: 0.06em;
 }
 
-.portfolio-item {
-  background-color: var(--bgc-light);
+.portfolio-cards-description {
+  margin: 0;
 }
 
 .portfolio-cards-list .portfolio-cards-description {
